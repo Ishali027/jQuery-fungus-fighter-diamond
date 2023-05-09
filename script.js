@@ -87,7 +87,15 @@ function attackStarFirebtn(){
 }
 
 function fungusDead(){
-
+    if(fungusHP===0){
+        $('.freaky-fungus').removeClass('walk').addClass('dead');
+    } else if(attackPower<=0){
+        $('.freaky-fungus').removeClass('walk').addClass('jump');
+        $('.attack-btn').prop('disabled', true)
+        
+    }
+    showOnDom();
+}
 
 
 
